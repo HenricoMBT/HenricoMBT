@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+}
+
+h1, h2 {
+    color: #2E8B57;
+}
+.race-day {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.race-day h2 {
+    margin-top: 0;
+}
+.details {
+    margin-left: 20px;
+}
