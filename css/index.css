@@ -56,7 +56,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-right: 220px;
+    margin-right: 175px;
     display: flex;
     justify-content: space-evenly;
 }
