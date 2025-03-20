@@ -41,12 +41,12 @@ img {
 
 .right-box {
     position: fixed; /* Keeps it fixed on the right */
-    right: 20px; /* Adjusts distance from the right edge */
+    right: 40px; /* Adjusts distance from the right edge */
     top: 50%; /* Centers it vertically */
     transform: translateY(-50%); /* Ensures true vertical centering */
     width: 300px; /* Adjust size as needed */
-    height: 400px; /* Adjust height */
-    background-color: #3498db; /* Box color */
+    height: 300px; /* Adjust height */
+    background-color: #FFFFFF; /* Box color */
     border-radius: 10px; /* Optional: rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
     padding: 20px;
