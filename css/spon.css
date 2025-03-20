@@ -1,85 +1,49 @@
-* { 
-    font-family: tahoma; 
-}
-
+*{font-family: tahoma;}
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
+    ;
+   
 }
-
-.title {
-    text-align: center;
-}
-
-/* Main Sponsor Section */
 .sponsor-container {
     display: flex;
-    justify-content: flex-start; /* Moves the boxes to the left */
-    gap: 20px; /* Adds space between sponsors */
-    max-width: 900px;
-    margin-left: 0; /* Aligns the section to the left */
-    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
-
-/* Each Sponsor Box */
 .sponsor {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 45%;  /* Each sponsor takes 45% of the section */
-    text-align: left;
+    width: 200px;
 }
-
-/* Sponsor Images */
 img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-/* Links */
-a {
-    color: black;
-    text-decoration: none;
+.sponsor-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 50px;
+    max-width: 900px; /* Adjust based on preference */
+    margin: 0 auto; /* Centers the grid */
 }
 
-/* Become a Sponsor Section */
-.sponsor-info {
-    width: 45%; /* Takes the right half of the section */
-    background: #f9f9f9;
+.sponsor {
+    background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    margin-left: auto; /* Ensures it stays on the right */
 }
 
-/* Main Container for Sponsors + Info */
-.main-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1000px;
-    margin: 40px auto;
-    gap: 20px;
+
+a{
+    color: black;
+    text-align: center;
 }
-
-/* Responsive: Mobile View */
-@media (max-width: 768px) {
-    .main-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sponsor-container,
-    .sponsor-info {
-        width: 100%;
-    }
-
-    .sponsor-container {
-        justify-content: center; /* Center on smaller screens */
-    }
+.title{
+    text-align: center;
 }
