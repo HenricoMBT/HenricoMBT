@@ -65,3 +65,7 @@
 .faq.active {
   border: none;
 }
+
+body {
+    background-color: lightblue;
+  }
