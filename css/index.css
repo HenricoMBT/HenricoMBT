@@ -1,4 +1,6 @@
-/* General Styling */
+/* ====================
+   Global Reset & Font
+   ==================== */
 * {
     font-family: Tahoma, sans-serif;
     margin: 0;
@@ -6,23 +8,24 @@
     box-sizing: border-box;
 }
 
+/* Ensures footer stays at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+/* ====================
+   Navbar Section
+   ==================== */
 
-/* =======================
-   START: Navbar Section
-   ======================= */
-
-
-#logoimg{
-
+#logoimg {
     width: 70px;
     height: 70px;
     display: flex;
     right: 50;
-
 }
-   
-/* Header Styling */
+
 header {
     position: fixed;
     top: 0;
@@ -70,88 +73,69 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 header a {
     text-decoration: none;
     color: #ffffff;
     transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Dropdown Content */
+/* Dropdown Menu */
 .dropdown-content {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     padding: 3px 0;
-    white-space: nowrap; /* Prevents line breaks */
+    white-space: nowrap;
     top: 45px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-    /* Each Menu Item */
-    .dropdown-content li {
-        list-style: none;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+.dropdown-content li {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-    /* Links inside Dropdown */
-    .dropdown-content li a {
-        display: inline-block;
-        padding: 8px 0.01px;
-        font-size: 14px;
-        color: #333;
-        text-decoration: none;
-        transition: background 0.2s ease;
-        border-radius: 8px;
-        background-color: #f9f9f9;
-        text-align: center;
-    }
+.dropdown-content li a {
+    display: inline-block;
+    padding: 8px 0.01px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
 
-    /* Hover Effect */
-    .dropdown-content li a:hover {
-        background-color: #eaeaea;
-        color: #000;
-    }
+.dropdown-content li a:hover {
+    background-color: #eaeaea;
+    color: #000;
+}
 
-/* Show on Hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 
+/* ====================
+   Hero Section
+   ==================== */
 
-
-
-
-
-
-
-
-
-
-
-
-/* =======================
-   END: Navbar Section
-   ======================= */
-
-
-
-
-
-
-/* Hero Section with Video */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh; /* Fullscreen background */
+    height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -160,7 +144,6 @@ header nav ul li a:hover {
     color: white;
 }
 
-/* Background Video */
 .bg-video {
     position: absolute;
     top: 0;
@@ -170,7 +153,6 @@ header nav ul li a:hover {
     object-fit: cover;
 }
 
-/* Dark Overlay for Readability */
 .hero .overlay {
     position: absolute;
     width: 100%;
@@ -178,7 +160,6 @@ header nav ul li a:hover {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* Hero Content */
 .hero-content {
     position: relative;
     z-index: 1;
@@ -193,7 +174,38 @@ header nav ul li a:hover {
     font-size: 18px;
 }
 
-/* About Section */
+/* Scroll Arrow */
+.scroll-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    z-index: 4;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, -10px);
+    }
+}
+
+.scroll-arrow.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ====================
+   About Section
+   ==================== */
+
 #about {
     padding: 50px;
     text-align: center;
@@ -204,112 +216,89 @@ header nav ul li a:hover {
     font-size: 36px;
 }
 
-#about p1 {
+#about p, #about p1 {
     font-size: 18px;
     max-width: 800px;
-    margin-top: 800px;
+    position: relative;
+    margin: auto;
 }
 
-#about p {
-    font-size: 18px;
-    max-width: 800px;
-    position:relative
-}
-
-
-
-   *{
-    padding:0;
-    margin:0;
-    box-sizing:border-box;
-   }
-.footer-container{
-    background-color: rgb(0, 0, 0);
-    
-}
-
-.footer{
-    width: auto;
-    height:2;
-    background-color: rgb(0, 0, 0);
-    color:#f9f9f9;
+/* Image & Paragraph Layout */
+.aboutsc {
     display: flex;
-    justify-content:space-evenly;
-    flex-wrap:wrap;
-    margin:0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 80%;
+    margin: auto;
 }
 
-.footer-heading{
-    display:flex;
-    flex-direction:column;
-    margin-right:64px;
+.aboutsc p {
+    flex: 1;
+    font-size: 18px;
+    max-width: 50%;
 }
 
-.footer-heading h2{
-    margin-bottom: 3px;
+.imgdesc {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
 }
 
-.footer-heading a{
-    color:#ffffff;
-    text-decoration:none;
-    margin-bottom:8px;
+/* ====================
+   Footer Section
+   ==================== */
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 8px 0;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
 }
 
-.footer-heading a:hover{
-    color:green;
-    transition:0.3s ease-out;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-footer-email-form h2{
-    margin-bottom:32px;
+.footer-section {
+    flex: 1;
+    text-align: center;
+    min-width: 150px;
 }
 
-#footer-email{
-    width:250px;
-    height:40px;
-    border-radius:4px;
-    outline:none;
-    border:none;
-    padding-left:8px;
-    font-size:16px;
-    margin-bottom:16px;
+.footer-section h3 {
+    font-size: 14px;
+    margin-bottom: 0px;
 }
 
-#footer-email::placeholder{
-    color:rgb(0, 0, 0)
+.footer-section a {
+    font-size: 12px;
+    margin: 1px;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-
-
-
-@media screen and (max-width:default){
-    .footer{
-        height:540 px;
-    }
-    .footer-email-form{
-        margin-top:64 px;
-    }
+.footer-section a:hover {
+    color: green;
+    transition: .2s ease-out;
 }
 
-@media screen and (max-width:default){
-    .footer{
-        padding-top:32px;
-    }
+/* ====================
+   Responsive Design
+   ==================== */
 
-}
-
-@media screen and (max-width:default){
-    .footer-3{
-        display:none;
-    }
-    .footer-email-form{
-        margin-top:32 px;
-    }
-
-}
-
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
     header {
         padding: 10px 15px;
@@ -338,127 +327,4 @@ footer-email-form h2{
     .menu-toggle {
         display: block;
     }
-}
-
-
-
-/* START OF IMAGE AND PARAGPAH CSS*/
-
-
-.aboutsc {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: center; /* Center the content */
-    gap: 20px; /* Add some space between the text and image */
-    padding: 20px;
-    max-width: 80%;
-    margin: auto; /* Center the section */
-}
-
-.aboutsc p {
-    flex: 1; /* Make the text take available space */
-    font-size: 18px;
-    max-width: 50%; /* Control text width */
-}
-
-.imgdesc {
-    flex: 1; /* Make the image take available space */
-    max-width: 50%; /* Prevent image from getting too big */
-    height: auto;
-}
-
-/* END OF THE DESC */
-
-
-/*START FOOTER*/
-
-/* Footer Styling */
-
-/* Footer Styling */
-/* Footer Styling */
-.footer {
-    background-color: black;
-    color: white;
-    padding: 8px 0; /* Keeps it thin */
-    text-align: center;
-    width: 100%;
-    height: 60px; /* Keeps it slim */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: auto; /* Pushes it down when content is short */
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section {
-    flex: 1;
-    text-align: center;
-    min-width: 150px;
-}
-
-.footer-section h3 {
-    font-size: 14px;
-    margin-bottom: 0px;
-}
-
-.footer-section a{
-    font-size: 12px;
-    margin: 1px;
-    color: #ffffff;
-    text-decoration: none;
-  
-}
-
-.footer-section a:hover{
-    color:green;
-    transition: .2s ease-out;
-}
-
-/* Ensures the footer stays at the bottom when content is short */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
-
-
-
-
-/* ARROW */
-
-.scroll-arrow {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: white;
-    z-index: 4;
-    animation: bounce 2s infinite;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translate(-50%, 0);
-    }
-    50% {
-        transform: translate(-50%, -10px);
-    }
-}
-
-.scroll-arrow.hidden {
-    opacity: 0;
-    pointer-events: none;
 }
