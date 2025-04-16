@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-    <link href="../css/index.css" rel="stylesheet">
-    <link href="../css/gallery.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <script src="../js/gallery.js" defer></script>
     <script src="../js/index.js" defer></script>
     <link rel="icon" type="image/x-icon" href="../images/henrico-mtb-logo-color.svg">
-    <style>
-        .mySlides {display:none; width: 100%; height: 700px; object-fit: cover; transition: opacity 1s ease-in-out;}
-    </style>
 </head>
 <body>
 
@@ -22,24 +22,22 @@
                 <img src="../images/henrico-mtb-logo-color.svg" id="logoimg" alt="Henrico MTB Logo">
             </a>
         </div>
-      
+
         <!-- NAVBAR -->
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="meet.html">Meet the Team</a></li>
                 <li><a href="spon.html">Sponsors</a></li>
-              
-                <!-- DROPDOWN -->
                 <li class="dropdown">
                     <a href="#" class="dropbtn">More</a>
                     <ul class="dropdown-content">
                         <li><a href="faq.html">FaQ</a></li>
                         <li><a href="https://www.starlightapparel.com/collections/henrico-mbt" target="_blank">Uniform</a></li>
-                        <li><a href="https://www.customink.com/fundraising/henrico-mtb-team-fundraiser" target="_blank">Merch</a></li>  
-                        <li><a href="Gallery.html">Gallery</a></li>  
+                        <li><a href="https://www.customink.com/fundraising/henrico-mtb-team-fundraiser" target="_blank">Merch</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
                         <li><a href="race.html">Races</a></li>
-                        <li><a href="waiver.html">Waivers</a></li>   
+                        <li><a href="waiver.html">Waivers</a></li>
                     </ul>
                 </li>
             </ul>
@@ -56,50 +54,31 @@
         <div class="hero-content">
             <h1>Gallery</h1>
         </div>
-
         <div class="scroll-arrow" id="scrollArrow">
             ↓
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <div class="w3-content w3-display-container">
-        <img class="mySlides" src="../images/img1.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img5.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img6.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img7.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img8.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img9.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img10.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img11.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img12.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img13.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img14.jpg" style="width:100%; height:700px;">
-        <img class="mySlides" src="../images/img15.jpg" style="width:100%; height:700px;">
-        
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    <div class="gallery-container">
+        <div class="gallery-slideshow">
+            <img class="mySlides" src="../images/img1.jpg" alt="Image 1">
+            <img class="mySlides" src="../images/img5.jpg" alt="Image 5">
+            <img class="mySlides" src="../images/img6.jpg" alt="Image 6">
+            <img class="mySlides" src="../images/img7.jpg" alt="Image 7">
+            <img class="mySlides" src="../images/img8.jpg" alt="Image 8">
+            <img class="mySlides" src="../images/img9.jpg" alt="Image 9">
+            <img class="mySlides" src="../images/img10.jpg" alt="Image 10">
+            <img class="mySlides" src="../images/img11.jpg" alt="Image 11">
+            <img class="mySlides" src="../images/img12.jpg" alt="Image 12">
+            <img class="mySlides" src="../images/img13.jpg" alt="Image 13">
+            <img class="mySlides" src="../images/img14.jpg" alt="Image 14">
+            <img class="mySlides" src="../images/img15.jpg" alt="Image 15">
+        </div>
+
+        <button class="nav-btn prev" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="nav-btn next" onclick="plusDivs(1)">&#10095;</button>
     </div>
-
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-            }
-            x[slideIndex-1].style.display = "block";  
-        }
-    </script>
 
 </body>
 </html>
