@@ -15,7 +15,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive, bigger cards */
     gap: 60px;
     max-width: 1200px; /* Wider layout */
-    margin: 0 auto;
+    
     padding: 40px 20px;
 }
 
