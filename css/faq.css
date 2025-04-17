@@ -14,23 +14,6 @@ body {
   background-color: #848181;
 }
 
-/* Wrapper centers content */
-.wrapper {
-  max-width: 75%;
-  margin: auto;
-}
-
-/* Paragraphs and headings inside wrapper */
-.wrapper > p,
-.wrapper > h1 {
-  margin: 1.5rem 0;
-  text-align: center;
-}
-
-/* Main heading styling */
-.wrapper > h1 {
-  letter-spacing: 4px;
-}
 
 /* Accordion button */
 .accordion {
