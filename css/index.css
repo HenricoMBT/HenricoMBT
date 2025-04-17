@@ -386,7 +386,7 @@ footer-email-form h2{
 
 .imgdesc {
     flex: 1; /* Make the image take available space */
-    max-width: 65%; /* Prevent image from getting too big */
+    max-width: 35%; /* Prevent image from getting too big */
     height: auto;
 }
 
