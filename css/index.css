@@ -235,7 +235,7 @@ ul{
     text-align:center;
     background:rgb(240, 233, 233);
     list-style-type:none;
-    text-wrap:nowrap;
+    text-wrap:wrap;
     border-radius: 2.5px;
     box-shadow:4.5px 4.5px;
     
