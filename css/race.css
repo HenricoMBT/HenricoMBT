@@ -68,7 +68,7 @@ h2 {
     max-width: 600px;
 }
 
-/* Mountain Bike Wheel Effect */
+
 .race-day::before {
     content: "";
     position: absolute;
