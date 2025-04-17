@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Frequently Asked Quetsions</title>
+    <!-- This is the title that appears in the browser tab -->
+    <title>Frequently Asked Quetsionss</title>
+
+    <!-- These are links to external JavaScript files (code that makes things interactive) -->
     <script src="../js/faq.js" defer></script>
     <script src="../js/index.js" defer></script>
+
+    <!-- These are links to the CSS (styling) files for this page -->
     <link href="../css/faq.css" rel="stylesheet">
     <link href="../css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- This adds the small icon that shows up in the browser tab -->
     <link rel="icon" type="image/x-icon" href="../images/henrico-mtb-logo-color.svg">
+
+    <!-- These settings help with how the page is shown on different devices like phones or tablets -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frequently Asked Questions</title>
-    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- This is a library for the icons used in the dropdown arrows -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -22,336 +32,80 @@
   </head>
   <body>
 
-    
-
-
- 
-<!--ENTIRE NAVIGATION AND ENTRY SECTION-->
+<!-- ==================== HEADER / NAVIGATION ==================== -->
 <header>
-  <!-- Logo -->
-
+  <!-- This is the logo in the top left corner -->
   <div class="logo">
-      <a href="../index.html">
+    <a href="../index.html">
       <img src="../images/henrico-mtb-logo-color.svg" id="logoimg">
-      </a>
+    </a>
   </div>
 
-  <!-- NAVBAR -->
+  <!-- This is the navigation bar with all the links to other pages -->
   <nav>
-      <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="meet.html">Meet the Team</a></li>
-          <li><a href="spon.html">Sponsors</a></li>
-          
-          <!-- DROPDOWN -->
-          <li class="dropdown">
-              <a href="#" class="dropbtn">More</a>
-              <ul class="dropdown-content">
-                  <li><a href="faq.html">FaQ</a></li>
-                  <li><a href ="https://www.starlightapparel.com/collections/henrico-mbt" target="_blank">Uniform</a></li>
-                  <li><a href="https://www.customink.com/fundraising/henrico-mtb-team-fundraiser" target="_blank">Merch</a></li>  
-                  <li><a href="Gallery.html">Gallery</a></li>  
-                  <li><a href="race.html">Races</a></li>
-                  <li><a href="waiver.html">Waivers</a></li>   
-              </ul>
-          </li>
-      </ul>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="meet.html">Meet the Team</a></li>
+      <li><a href="spon.html">Sponsors</a></li>
+      
+      <!-- This is a dropdown menu labeled 'More' -->
+      <li class="dropdown">
+        <a href="#" class="dropbtn">More</a>
+        <ul class="dropdown-content">
+          <li><a href="faq.html">FaQ</a></li>
+          <li><a href="https://www.starlightapparel.com/collections/henrico-mbt" target="_blank">Uniform</a></li>
+          <li><a href="https://www.customink.com/fundraising/henrico-mtb-team-fundraiser" target="_blank">Merch</a></li>  
+          <li><a href="Gallery.html">Gallery</a></li>  
+          <li><a href="race.html">Races</a></li>
+          <li><a href="waiver.html">Waivers</a></li>   
+        </ul>
+      </li>
+    </ul>
   </nav>
-  <!--NABVABR END-->
 </header>
-<!--ENTIRE NAVIGATION AND ENTRY SECTION-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Hero Section with Video Background -->
+<!-- ==================== HERO SECTION (with background video) ==================== -->
 <section class="hero">
-    <video autoplay loop muted playsinline class="bg-video">
-        <source src="../images/tester3.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="overlay"></div>
-    <div class="hero-content">
-        <h1>Frequently Asked Questions</h1>
-   
-        
-    </div>
-    <div class="scroll-arrow" id="scrollArrow">
-      ↓
+  <!-- This is the background video -->
+  <video autoplay loop muted playsinline class="bg-video">
+    <source src="../images/tester3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark overlay to make text easier to read over the video -->
+  <div class="overlay"></div>
+
+  <!-- Text content that appears over the video -->
+  <div class="hero-content">
+    <h1>Frequently Asked Questions</h1>
   </div>
+
+  <!-- Down arrow to scroll to the FAQ section -->
+  <div class="scroll-arrow" id="scrollArrow">↓</div>
 </section>
 
+<!-- ==================== MAIN FAQ SECTION ==================== -->
+<div class="wrapper">
+  <h1>Frequently Asked Questions</h1>
 
+  <!-- Start of one FAQ item -->
+  <div class="faq">
+    <!-- This is the question. Click to open the answer. -->
+    <button class="accordion">
+      What is needed to join the team?
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
 
-
-
-
-
-
-    <div class="wrapper">
-      <h1>Frequently Asked Questions</h1>
-
-      <div class="faq">
-        <button class="accordion">
-            What is needed to join the team?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Connect with the Henrico MBT Team Director, Coach Pete to express interest.
-          </p>
-          <p>
-            ____________________________________________________________________________    
-          </p>
-
-            <p>
-            Waiver signed by a parent / guardian.
-          </p>
-         
-          <p>
-            ____________________________________________________________________________
-          </p>
-          <p>
-            A mountain bike, bike helmet, water bottle, spare tube, and a tire lever.
-          </p>
-          <p>
-            ____________________________________________________________________________
-          </p>
-          <p>
-            Meet age (and location) requirements for each race series.
-          </p>
-          <p>
-            ____________________________________________________________________________
-          </p>
-          <p>
-            Henrico MBTTeam jersey.
-          </p>
-          <p>
-            ____________________________________________________________________________
-          </p>
-         <p>
-            Meet age (and location) requirements for each race series,
-          </p>
-            ____________________________________________________________________________    
-          </p>
-          <p>
-            All registrations and fees for that season's particular race series as each has their own requirements.
-          </p>
-          <p>
-            ____________________________________________________________________________    
-          </p>
-          <p>
-            Timeliness to practices and races.
-          </p>
-          <p>
-            ____________________________________________________________________________    
-          </p>
-          <p>
-            Willingness to learn, listen, and have fun.
-        </p>
-          <p>
-            ____________________________________________________________________________    
-          </p>
-        </div>
-      </div>
-
-      <div class="faq">
-        <button class="accordion">
-          What are the racing seasons and when do you practice?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            The Spring racing season starts in March, with races held April through May. The Fall racing season starts in July, with races held September through October. During racing season, the team will typically hold practices three times a week - twice on weekdays and once on Saturday. The expectation is for team members to attend two practices per week. Over the winter, we may hold community Sunday rides or “Captain’s Rides” to create team cohesion, build skills, and base miles.
-
-          </p>
-        </div>
-      </div>
-
-      <div class="faq">
-        <button class="accordion">
-            My child is not very “athletic” - how would he/she do in mountain biking?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Many kids have not found their niche in traditional ball sports, but that doesn’t mean that they aren’t athletic - they just haven’t found a sport that appeals to them. The team is inclusive, every kid on the team gets to race - there is no “sitting the bench.” If they can finish, they will score points for the team, but it is more about accomplishing personal goals than being on the winner’s podium. If your child likes biking, they have a lifelong sport that can be enjoyed for years!          </p>
-        </div>
-      </div>
-
-      <div class="faq">
-        <button class="accordion">
-            Is mountain biking safe?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Any sport has a degree of risk, but mountain biking is considered far safer than many mainstream sports. Risk management practices to minimize danger are put into place at all practices and races. Henrico MBT is led by certified coaches who are professionally trained in safe mountain biking practices. Coaches carry radios to be able to communicate quickly when out on the trails.          </p>
-        </div>
-      </div>
-
-      <div class="faq">
-        <button class="accordion">
-            Where do you bike?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Our slice of Virginia has many awesome mountain bike trails. Team practices take place on bike trails or fire roads in our wonderful area parks; typically Forest Hill Park and Powhite Park just to name a couple. The kids get to see areas that they may not see on foot, developing a real connection to the outdoors. Races are scheduled via the <a href="https://vahs-sports.com/about/">VAHS</a> series (spring) and <a href="https://virginiamtb.org/">NICA</a> (fall) in varying beautiful locations of VA.
-          </p>
-        </div>
-      </div>
-      <div class="faq">
-        <button class="accordion">
-          Where are races held?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Races are scheduled via the VAHS series (spring) and NICA (fall) in varying, beautiful locations of VA. Race schedules and locations are posted to the series’ websites a few months prior to the start of each season. However, most races are held near the Charlottesville area in order to be centrally located to competitors from around the state. From Richmond, most races can be done as a day trip. The one exception is for races that are held at <a href="https://www.camplife.com/campground/stokesville+campground">Stokesville Campground</a>. Stokesville is located west of Staunton, so many team members opt to reserve a campsite. We will typically have a team dinner and often have group rides on Sunday morning. Be aware that the campsites typically sell out, so keep an eye on team notifications if you would like to reserve a campsite. 
-          </p>
-        </div>
-      </div>
-      <div class="faq">
-        <button class="accordion">
-          What is a race day like?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Race days are an absolute blast. The race organizers play music to pump up the riders, and crowds cheer on everyone as they fly by. We ask parents who are available to arrive early and help set up the team tents and tables. Everyone brings their favorite snacks to share so there’s always plenty of fuel available for the riders. 
-          </p>
-        </div>
-      </div>
-      <div class="faq">
-        <button class="accordion">
-            Will my child be riding by herself / himself?
-            <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            No, students will always be riding in groups with an adult leading and sweeping during practices. During races, the coaches will not be out on the course, but there will be course marshals strategically placed throughout the course and sweepers who will follow each group of racers to make sure everyone is ok. Safety at practice and at the races is top priority!
-
-
-          </p>
-        </div>
-      </div>
-
-<div class="faq">
-        <button class="accordion">
-            What are the costs?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Overall, the sport of youth mountain biking is typically more cost effective than many traditional sports. The race series have their own registration fees which may vary year to year. These fees cover race insurance, event expenses, & training. There is also the cost of a team bike jersey which may also vary, but is required for race events.
-
-
-          </p>
-        </div>
-      </div>
-
-
-      <div class="faq">
-        <button class="accordion">
-          Are boys and girls scored separately in the races?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Yes, boys and girls are scored separately for individual standings, but the team as a whole is co-ed. Points earned by the individuals in their respective categories are totaled and the team competes against other teams for their overall standing in the league.
-
-          </p>
-        </div>
-      </div>
-
-
-      <div class="faq">
-        <button class="accordion">
-          How do you communicate with the team if there is foul weather or changes happen to practice / race plans?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            We use <a href="https://heja.io/">Heja</a> ; an easy & free application for immediate group alerts. Detailed info will be shared via email through the team’s Google Group.
-
-          </p>
-        </div>
-      </div>
-      <div class="faq">
-        <button class="accordion">
-          Do parents / guardians need to know how to ride for their child to bike on the team?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            No, but we encourage you to try it. One of the best aspects of mountain biking is that, unlike many other sports, it is a sport in the whole family can participate. You can learn together!
-
-          </p>
-        </div>
-      </div>
-      <div class="faq">
-        <button class="accordion">
-          Can parents / guardians participate and ride with their kid(s) during team practices?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            Yes, we encourage parents to bike. You don’t have to be an expert rider to help out the team, but anyone participating in rides during NICA season must register with NICA, pass a background check prior, and complete NICA’s online concussion course. We encourage parents to volunteer in any capacity they are able as the team is all about volunteers - there are multiple fun volunteer opportunities outside of the actual biking as well.
-
-          </p>
-        </div>
-      </div>
-
-      <div class="faq">
-        <button class="accordion">
-            Need more Info? Contact Us!
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="pannel">
-          <p>
-            <a href="mailto:henricomtb@gmail.com">Email Us</a>
-  
-  
-          </p>
-        </div>
-      </div>
-  
+    <!-- This is the answer. You can edit the text here as needed. -->
+    <div class="pannel">
+      <p>Connect with the Henrico MBT Team Director, Coach Pete to express interest.</p>
+      <p>Waiver signed by a parent / guardian.</p>
+      <p>A mountain bike, bike helmet, water bottle, spare tube, and a tire lever.</p>
+      <p>Meet age (and location) requirements for each race series.</p>
+      <p>Henrico MBT Team jersey.</p>
+      <p>All registrations and fees for that season's race series as each has their own requirements.</p>
+      <p>Timeliness to practices and races.</p>
+      <p>Willingness to learn, listen, and have fun.</p>
     </div>
-   
-   
-    </div>
-
   </div>
-
-  <footer class="footer">
-      <div class="footer-container">
-          <div class="footer-section">
-              <h3>Contact Us</h3>
-              <a href="https://www.starlightapparel.com/collections/henrico-mbt" target = "_blank">Phone</a>|<a href="https://www.starlightapparel.com/collections/henrico-mbt" target = "_blank">Email</a>
-          </div>
-          <div class="footer-section">
-              <h3>Social Media</h3>
-              <a href="https://www.instagram.com/henricombt/" target = "_blank">Instagram</a>|<a href="https://www.facebook.com/henricocomposite/" target = "_blank">FaceBook</a>
-          </div>
-
-          <div class="footer-section">
-              <h3>Leagues</h3>
-              <a href="https://nationalmtb.org/" target = "_blank">NICA</a>|<a href="https://vahs-sports.com/" target = "_blank">VAHS</a>
-          </div>
-      </div>
-  </footer>
-
-
-</body>
-</html>
+  <!-- Repeat the above block for each question and answer -->
