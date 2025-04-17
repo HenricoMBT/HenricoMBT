@@ -1,87 +1,96 @@
 /* Importing the Roboto font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-/* Universal selector (*) resets all padding, margin, and box-sizing for all elements */
+/* Reset for all elements */
 * {
-  padding: 0; /* Removes default padding */
-  margin: 0;  /* Removes default margin */
-  box-sizing: border-box; /* Makes sure the width and height of elements include padding and border */
-  font-family: "Roboto", sans-serif; /* Sets Roboto font as the default font for the page */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-/* Body styling - applies background color to the entire page */
+/* Body background */
 body {
-  background-color: #848181; /* Light gray background color */
+  background-color: #848181;
 }
 
-/* Wrapper class - keeps content centered and controls its width */
+/* Wrapper centers content */
 .wrapper {
-  max-width: 75%; /* Maximum width is 75% of the page width */
-  margin: auto;  /* Centers the wrapper horizontally */
+  max-width: 75%;
+  margin: auto;
 }
 
-/* Styling for paragraphs and headings inside the .wrapper */
+/* Paragraphs and headings inside wrapper */
 .wrapper > p,
 .wrapper > h1 {
-  margin: 1.5rem 0; /* Adds space above and below paragraphs and headings */
-  text-align: center; /* Centers the text */
+  margin: 1.5rem 0;
+  text-align: center;
 }
 
-/* Styling for the main heading (h1) inside the .wrapper */
+/* Main heading styling */
 .wrapper > h1 {
-  letter-spacing: 4px; /* Adds space between each letter in the heading */
+  letter-spacing: 4px;
 }
 
-/* Accordion button styling */
+/* Accordion button */
 .accordion {
-  background-color: #4b92db; /* Blue background color for the accordion button */
-  color: rgba(0, 0, 0, 0.8); /* Text color is dark, with a slight transparency */
-  cursor: pointer; /* Changes the cursor to a hand when hovering over the button */
-  font-size: 1.2rem; /* Sets font size of the text in the button */
-  width: 100%; /* Makes the button span the full width of its container */
-  padding: 2rem 2.5rem; /* Adds padding inside the button */
-  border: none; /* Removes any default border */
-  outline: none; /* Removes outline when clicked */
-  transition: 0.4s; /* Adds smooth transition effects for any changes (like color change) */
-  display: flex; /* Uses flexbox to align content inside the button */
-  justify-content: space-between; /* Spaces out the items (text and icon) at each end */
-  align-items: center; /* Vertically centers the items */
-  font-weight: bold; /* Makes the text bold */
+  background-color: #4b92db;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
 }
 
-/* Styling for the icon inside the accordion button */
+/* Icon inside accordion */
 .accordion i {
-  font-size: 1.9rem; /* Sets the icon size */
+  font-size: 1.9rem;
 }
 
-/* Active state and hover effect for the accordion button */
+/* Hover and active state */
 .active,
 .accordion:hover {
-  background-color: #FF8200; /* Changes background color to orange when active or hovered */
+  background-color: #ff8200;
 }
 
-/* Panel (content section) styling that shows or hides when the accordion is clicked */
-.pannel {
-  padding: 0 2rem 2.5rem 2rem; /* Adds padding inside the panel */
-  background-color: #FF8200; /* Sets orange background color */
-  overflow: hidden; /* Prevents content from overflowing outside the panel */
-  display: none; /* Hides the panel by default (it will be shown when the accordion is clicked) */
-}
-
-/* Paragraph styling inside the panel */
-.pannel p {
-  color: rgba(0, 0, 0, 0.7); /* Sets text color with a slight transparency */
-  font-size: 1.2rem; /* Sets font size for text in the panel */
-  line-height: 1.4; /* Adds space between lines of text */
-}
-
-/* FAQ section border styling */
+/* FAQ section container */
 .faq {
-  border: 1px solid rgba(0, 0, 0, 0.2); /* Adds a light border around each FAQ item */
-  margin: 10px 0; /* Adds space above and below each FAQ item */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
 }
 
-/* Removes the border from the FAQ when it's active (opened) */
+/* Remove border when open */
 .faq.active {
-  border: none; /* Removes the border when the FAQ is open */
+  border: none;
+}
+
+/* Panel container (with animation) */
+.pannel {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+  background-color: #ff8200;
+  transition: max-height .3s ease, opacity .3s ease, padding 0.3s ease;
+}
+
+/* Panel visible state */
+.pannel.open {
+  max-height: 500px;
+  opacity: 1;
+  padding: 2rem;
+}
+
+/* Panel paragraph */
+.pannel p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  line-height: 1.4;
 }
