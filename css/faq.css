@@ -1,56 +1,73 @@
-/* Importing a font called Roboto from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-/* This applies to ALL elements on the page */
 * {
-  padding: 0; /* Removes default padding */
-  margin: 0;  /* Removes default margin */
-  box-sizing: border-box; /* Makes layout sizing easier to manage */
-  font-family: "Roboto", sans-serif; /* Sets the font for all text */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-/* This closing bracket is extra and can be removed if not needed */
-/* } */
+}
 
-/* Styles for the whole page background */
 body {
-  background-color: #808080; /* Light gray background */
+  background-color: #808080; /* Added this line for a light gray background */
 }
 
-/* Container that holds all FAQ content */
 .wrapper {
-  max-width: 75%;  /* Limits how wide the content can be */
-  margin: auto;    /* Centers the content on the page */
+  max-width: 75%;
+  margin: auto;
 }
 
-/* Styles for the paragraphs and the FAQ page title inside the wrapper */
 .wrapper > p,
 .wrapper > h1 {
-  margin: 1.5rem 0;    /* Adds space above and below */
-  text-align: center;  /* Centers the text */
+  margin: 1.5rem 0;
+  text-align: center;
 }
 
-/* Extra styling for the FAQ title */
 .wrapper > h1 {
-  letter-spacing: 4px; /* Adds spacing between letters */
+  letter-spacing: 4px;
 }
 
-/* FAQ Question Button */
 .accordion {
-  background-color: #4b92db; /* Blue background */
-  color: rgba(0, 0, 0, 0.8); /* Dark text */
-  cursor: pointer; /* Changes mouse to pointer on hover */
-  font-size: 1.2rem; /* Font size of question text */
-  width: 100%; /* Makes button stretch across the full container */
-  padding: 2rem 2.5rem; /* Space inside the button */
-  border: none; /* Removes border */
-  outline: none; /* Removes focus outline */
-  transition: 0.4s; /* Smooth hover animation */
-  display: flex; /* Lets us space items horizontally */
-  justify-content: space-between; /* Spreads icon and text apart */
-  align-items: center; /* Vertically centers content */
-  font-weight: bold; /* Makes the question text bold */
+  background-color: #4b92db;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
 }
 
-/* Icon style inside each accordion question */
-.accordion i
+.accordion i {
+  font-size: 1.9rem;
+}
+
+.active,
+.accordion:hover {
+  background-color: #FF8200 ;
+}
+.pannel {
+  padding: 0 2rem 2.5rem 2rem;
+  background-color: #FF8200;
+  overflow: hidden;
+  background-color: #FF8200;
+  display: none;
+}
+.pannel p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.faq {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+.faq.active {
+  border: none;
+}
