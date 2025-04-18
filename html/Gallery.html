@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> <!-- Specifies the character encoding for the HTML document -->
+        <title>Gallery</title> <!-- Title of the webpage, displayed in the browser tab -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- Link to W3.CSS framework for styling -->
+        <link href="../css/Gallery.css" rel="stylesheet"> <!-- Link to custom Gallery stylesheet -->
+        <link href="../css/index.css" rel="stylesheet"> <!-- Link to the main index.css stylesheet -->
+        <script src="../js/index.js" defer></script> <!-- Link to custom JavaScript file (loaded after HTML parsing) -->
+        <link rel="icon" type="image/x-icon" href="../images/henrico-mtb-logo-color.svg"> <!-- Favicon for the webpage -->
+        <style>
+        .mySlides {display:none; width: 100%; height: 500px; object-fit: cover;} <!-- Custom style for the slideshow images -->
+        </style>
+    </head>
+    
+    
+    <body>
+    
+        <!-- Navigation Section -->
+      
+        <header>
+          <!-- Logo -->
+          <div class="logo">
+            <a href="/index.html"> <!-- Link to the homepage -->
+                <img src="../images/henrico-mtb-logo-color.svg" id="logoimg"> <!-- Logo image for the team -->
+              </a>
+          </div>
+      
+             <!-- NAVBAR -->
+             <nav>
+      <ul>
+          <li><a href="../index.html">Home</a></li> <!-- Link to the homepage -->
+          <li><a href="meet.html">Crew</a></li> <!-- Link to the "Meet the Crew" page -->
+          <li><a href="spon.html">Sponsors</a></li> <!-- Link to the Sponsors page -->
+          
+          <!-- DROPDOWN -->
+          <li class="dropdown">
+              <a href="#" class="dropbtn">More</a> <!-- Dropdown menu button -->
+              <ul class="dropdown-content">
+                  <li><a href="faq.html">FaQ</a></li> <!-- Link to the FAQ page -->
+                  <li><a href ="https://www.starlightapparel.com/collections/henrico-mbt" target="_blank">Uniform</a></li> <!-- Link to Uniform page (external) -->
+                  <li><a href="https://www.customink.com/fundraising/henrico-mtb-team-fundraiser" target="_blank">Merch</a></li>  <!-- Link to Merch page (external) -->
+                  <li><a href="Gallery.html">Gallery</a></li>  <!-- Link to the Gallery page -->
+                  <li><a href="race.html">Races</a></li>  <!-- Link to the Races page -->
+                  <li><a href="waiver.html">Waivers</a></li> <!-- Link to the Waivers page -->
+              </ul>
+          </li>
+      </ul>
+  </nav>
+          <!-- NAVBAR END -->
+      </header>
+    
+        <!-- Hero Section with Video Background -->
+        <section class="hero">
+          <video autoplay loop muted playsinline class="bg-video"> <!-- Video background that loops, plays inline, and is muted -->
+              <source src="../home.mp4" type="video/mp4"> <!-- Video source -->
+              Your browser does not support the video tag. <!-- Fallback message for unsupported browsers -->
+          </video>
+          <div class="overlay"></div> <!-- Overlay for the video background -->
+          <div class="hero-content">
+              <h1>Gallery</h1> <!-- Main heading of the page -->
+              
+          </div>
+
+          <div class="scroll-arrow" id="scrollArrow"> <!-- Scroll arrow indicator -->
+            ↓
+        </div>
+      </section>
+
+<!-- Slideshow Section -->
+<div class="w3-content w3-display-container"> <!-- Container for the slideshow -->
+  <img class="mySlides" src="../images/img1.jpg" style="width:100%; height:700px;"> <!-- First image in the slideshow -->
+  <img class="mySlides" src="../images/img5.jpg" style="width:100%; height:700px;"> <!-- Second image in the slideshow -->
+  <img class="mySlides" src="../images/img6.jpg" style="width:100%; height:700px;"> <!-- Third image in the slideshow -->
+  <img class="mySlides" src="../images/img7.jpg" style="width:100%; height:700px;"> <!-- Fourth image in the slideshow -->
+  <img class="mySlides" src="../images/img8.jpg" style="width:100%; height:700px;"> <!-- Fifth image in the slideshow -->
+  <img class="mySlides" src="../images/img9.jpg" style="width:100%; height:700px;"> <!-- Sixth image in the slideshow -->
+  <img class="mySlides" src="../images/img10.jpg" style="width:100%; height:700px;"> <!-- Seventh image in the slideshow -->
+  <img class="mySlides" src="../images/img11.jpg" style="width:100%; height:700px;"> <!-- Eighth image in the slideshow -->
+  <img class="mySlides" src="../images/img12.jpg" style="width:100%; height:700px;"> <!-- Ninth image in the slideshow -->
+  <img class="mySlides" src="../images/img13.jpg" style="width:100%; height:700px;"> <!-- Tenth image in the slideshow -->
+  <img class="mySlides" src="../images/img14.jpg" style="width:100%; height:700px;"> <!-- Eleventh image in the slideshow -->
+  <img class="mySlides" src="../images/img15.jpg" style="width:100%; height:700px;"> <!-- Twelfth image in the slideshow -->
+  
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button> <!-- Previous button for the slideshow -->
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button> <!-- Next button for the slideshow -->
+</div>
+
+<script>
+// Slideshow functionality
+var slideIndex = 1; // Start at the first image
+showDivs(slideIndex); // Display the first image
+
+function plusDivs(n) { // Function to navigate through the images
+  showDivs(slideIndex += n); // Update the current image index
+}
+
+function showDivs(n) { // Function to show the current image based on the index
+  var i;
+  var x = document.getElementsByClassName("mySlides"); // Get all images with the class "mySlides"
+  if (n > x.length) {slideIndex = 1} // If the index exceeds the number of images, loop back to the first image
+  if (n < 1) {slideIndex = x.length} // If the index is less than 1, loop to the last image
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  // Hide all images
+  }
+  x[slideIndex-1].style.display = "block";  // Show the current image
+}
+</script>
+        
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Social Media</h3> <!-- Section title for social media links -->
+                <a href="https://www.instagram.com/henricombt/" target = "_blank">Instagram</a>|<a href="https://www.facebook.com/henricocomposite/" target = "_blank">FaceBook</a> <!-- Links to Instagram and Facebook -->
+            </div>
+
+            <div class="footer-section">
+                <h3>Leagues</h3> <!-- Section title for league links -->
+                <a href="https://nationalmtb.org/" target = "_blank">NICA</a>|<a href="https://vahs-sports.com/" target = "_blank">VAHS</a> <!-- Links to NICA and VAHS websites -->
+            </div> 
+        </div>
+    </footer>
+    
+</body>
+</html>
