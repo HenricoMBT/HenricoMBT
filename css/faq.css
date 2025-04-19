@@ -5,7 +5,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
@@ -21,7 +20,10 @@ body {
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
   font-size: 1.2rem;
-  width: 100%;
+  width: 75%;
+  align-content: center;
+  margin-left: 150px;
+  border-radius: 10px;
   padding: 2rem 2.5rem;
   border: none;
   outline: none;
@@ -41,11 +43,12 @@ body {
 .active,
 .accordion:hover {
   background-color: #ff8200;
+  
 }
 
 /* FAQ section container */
 .faq {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  
   margin: 10px 0;
 }
 
@@ -61,7 +64,8 @@ body {
   overflow: hidden;
   padding: 0 2rem;
   background-color: #ff8200;
-  transition: max-height .3s ease, opacity .3s ease, padding 0.3s ease;
+  transition: max-height .4s ease, opacity .4s ease, padding .4s ease;
+  
 }
 
 /* Panel visible state */
@@ -69,6 +73,8 @@ body {
   max-height: 500px;
   opacity: 1;
   padding: 2rem;
+  width: 100%;
+  margin-left: 150px;
 }
 
 /* Panel paragraph */
@@ -76,4 +82,9 @@ body {
   color: rgba(0, 0, 0, 0.7);
   font-size: 1.2rem;
   line-height: 1.4;
+}
+
+h1{
+
+  text-align: center;
 }
